@@ -31,5 +31,12 @@ grep 'open tcp 37777' /home/ubuntu/VersaoDH/ips_encontrados.txt | awk '{print $4
 
 ================================================
 
-python3 dh.py -f /home/ubuntu/VersaoDH/mhdx_alvos.txt -u pdr -P Senha@2026 -t
- 50
+python3 dh.py -f /home/ubuntu/VersaoDH/mhdx_alvos.txt -u pdr -P Senha@2026 -t 50
+
+================================================
+
+tail -n +2 resultado.csv | cut -d',' -f1 > todos_ips.txt
+
+=================================================
+
+python3 dh.py -f /home/ubuntu/VersaoDH/todos_ip.txt -u pdr -P Senha@2026 -t 50
