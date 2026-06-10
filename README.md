@@ -16,6 +16,11 @@ Basicamente, você com o scan.sh escaneia o range em várias portas 80,37777,909
 Depois com o versao.py ele vai atras dos MHDX...
 Quando você tiver o resultado dos MHDX, pega a lista de IPS:porta, e cola nos IPS37777.TXT....E roda o dh...
 
+
+:IMPORTANTE:
+
+python3 dh.py -f todos_ips.txt -t 50 -p 37777
+
 ================================================
 
 python3 versaov2.py -f ipsformatados.txt -p 8080
