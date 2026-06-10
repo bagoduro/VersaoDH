@@ -29,3 +29,7 @@ sudo masscan -p 37777 179.100.0.0-179.120.255.254 --rate 5000 -oL /home/ubuntu/V
 grep 'open tcp 37777' /home/ubuntu/VersaoDH/ips_encontrados.txt | awk '{print $4}' > /home/ubuntu/VersaoDH/ipsformatados.txt
 
 
+================================================
+
+python3 dh.py -f /home/ubuntu/VersaoDH/mhdx_alvos.txt -u pdr -P Senha@2026 -t
+ 50
