@@ -43,4 +43,5 @@ tail -n +2 resultado.csv | cut -d',' -f1 > todos_ips.txt
 
 =================================================
 
-python3 dh.py -f /home/ubuntu/VersaoDH/todos_ip.txt -u pdr -P Senha@2026 -t 50
+python3 dh.py -f todos_ips.txt -t 50 -p 37777
+
