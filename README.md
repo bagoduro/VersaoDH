@@ -6,11 +6,11 @@ COMANDO: python3 versao.py -f ips37777.txt -t 300 -o intelversao1.csv
 
 dh.py: Para trabalhar junto depois de filtrado pra varias portas diferentes.
 
-grep "MHDX" resultado.csv | cut -d',' -f1 > /home/ubuntu/DahuaConsole/mhdx_alvos.txt
+grep "MHDX" resultado.csv | cut -d',' -f1 > /home/ubuntu/VersaoDH/mhdx_alvos.txt
 
-COMANDO: python3 dh.py -f /home/ubuntu/DahuaConsole/mhdx_alvos.txt -u pdr -P Senha@2026 -t 50
+COMANDO: python3 dh.py -f /home/ubuntu/VersaoDH/mhdx_alvos.txt -u pdr -P Senha@2026 -t 50
 
-DEFINITIVO ATÉ O MOMENTO: python3 dh.py -f /home/ubuntu/DahuaConsole/ips37777.txt -u pdr -P Senha@2026 -t 50
+DEFINITIVO ATÉ O MOMENTO: python3 dh.py -f /home/ubuntu/VersaoDH/ips37777.txt -u pdr -P Senha@2026 -t 50
 
 Basicamente, você com o scan.sh escaneia o range em várias portas 80,37777,9090,8080
 Depois com o versao.py ele vai atras dos MHDX...
