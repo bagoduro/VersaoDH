@@ -23,16 +23,15 @@ python3 dh.py -f todos_ips.txt -t 50 -p 37777
 
 ================================================
 
-python3 versaov2.py -f ipsformatados.txt -p 8080
-
-================================================
-
 sudo masscan -p 37777 179.100.0.0-179.120.255.254 --rate 5000 -oL /home/ubuntu/VersaoDH/ips_encontrados.txt -e ens5
 
 ================================================
 
 grep 'open tcp 37777' /home/ubuntu/VersaoDH/ips_encontrados.txt | awk '{print $4}' > /home/ubuntu/VersaoDH/ipsformatados.txt
 
+================================================
+
+python3 versaov2.py -f ipsformatados.txt -p 8080
 
 ================================================
 
