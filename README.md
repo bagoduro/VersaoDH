@@ -22,4 +22,4 @@ sudo masscan -p 37777 179.100.0.0-179.120.255.254 --rate 5000 -oL /home/ubuntu/V
 
 ================================================
 
-grep 'open tcp 37777' /home/ubuntu/DahuaConsole/ips_encontrados.txt | awk '{print $4}' > /home/ubuntu/VersaoDH/ipsformatados.txt
+grep 'open tcp 37777' /home/ubuntu/VersaoDH/ips_encontrados.txt | awk '{print $4}' > /home/ubuntu/VersaoDH/ipsformatados.txt
