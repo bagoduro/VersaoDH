@@ -15,3 +15,11 @@ DEFINITIVO ATÉ O MOMENTO: python3 dh.py -f /home/ubuntu/VersaoDH/ips37777.txt -
 Basicamente, você com o scan.sh escaneia o range em várias portas 80,37777,9090,8080
 Depois com o versao.py ele vai atras dos MHDX...
 Quando você tiver o resultado dos MHDX, pega a lista de IPS:porta, e cola nos IPS37777.TXT....E roda o dh...
+
+================================================
+
+sudo masscan -p 37777 179.100.0.0-179.120.255.254 --rate 5000 -oL /home/ubuntu/VersaoDH/ips_encontrados.txt -e ens5
+
+================================================
+
+grep 'open tcp 37777' /home/ubuntu/DahuaConsole/ips_encontrados.txt | awk '{print $4}' > /home/ubuntu/VersaoDH/ipsformatados.txt
